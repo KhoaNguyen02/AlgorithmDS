@@ -28,18 +28,6 @@ public:
         edges[u].push_back(Edge(u, v, time));
         edges[v].push_back(Edge(v, u, time));
     }
-
-    string toString() {
-        string result;
-        for (int i = 0; i < numVertices; i++) {
-            result += to_string(i) + ": ";
-            for (const Edge &edge : edges[i]) {
-                result += "(" + to_string(edge.v) + ", " + to_string(edge.time) + "); ";
-            }
-            result += "\n";
-        }
-        return result;
-    }
 };
 
 class Main {
